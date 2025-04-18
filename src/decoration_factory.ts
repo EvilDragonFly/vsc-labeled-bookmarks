@@ -203,54 +203,38 @@ export class DecorationFactory {
     public generateSvg(shape: string, color: string, iconText: string): [string, string] {
         iconText = iconText.normalize();
 
-        if (shape !== "unicode") {
-            if (!this.singleCharacterLabelPatern.test(iconText)) {
-                iconText = "";
-            } else {
-                iconText = iconText.substring(0, 1).toUpperCase();
-            }
-        }
 
         let fileNamePostfix = '';
         let svg: string;
 
-        if (iconText === "") {
-            switch (shape) {
-                case "circle": svg = svgCircle; break;
-                case "heart": svg = svgHeart; break;
-                case "label": svg = svgLabel; break;
-                case "star": svg = svgStar; break;
-                case "triangle": svg = svgTriangle; break; // 三角形
-                case "diamond": svg = svgDiamond; break; // 菱形
-                case "hexagon": svg = svgHexagon; break; // 六边形
-                case "flag": svg = svgFlag; break; // 旗帜
-                case "arrow": svg = svgArrow; break; // 箭头
-                case "pentagon": svg = svgPentagon; break; // 五边形
-                case "octagon": svg = svgOctagon; break; // 八边形
-                case "plus": svg = svgPlus; break;
-                case "checkmark": svg = svgCheckmark; break;
-                case "ring": svg = svgRing; break;
-                case "lightning": svg = svgLightning; break;
-                case "cloud": svg = svgCloud; break;
-                case "light": svg = svgLight; break;
-                case "pin": svg = svgPin; break;
-                case "zoom": svg = svgZoom; break;
-                case "share": svg = svgShare; break;
-                default:
-                    svg = svgBookmark;
-                    shape = "bookmark";
-            }
-        } else {
-            switch (shape) {
-                case "circle": svg = svgCircleWithText; break;
-                case "heart": svg = svgHeartWithText; break;
-                case "label": svg = svgLabelWithText; break;
-                case "star": svg = svgStarWithText; break;
-                case "unicode": svg = svgUnicodeChar; break;
-                default:
-                    svg = svgBookmarkWithText;
-                    shape = "bookmark";
-            }
+        switch (shape) {
+            case "circle": svg = svgCircle; break;
+            case "heart": svg = svgHeart; break;
+            case "label": svg = svgLabel; break;
+            case "star": svg = svgStar; break;
+            case "triangle": svg = svgTriangle; break; // 三角形
+            case "diamond": svg = svgDiamond; break; // 菱形
+            case "hexagon": svg = svgHexagon; break; // 六边形
+            case "flag": svg = svgFlag; break; // 旗帜
+            case "arrow": svg = svgArrow; break; // 箭头
+            case "pentagon": svg = svgPentagon; break; // 五边形
+            case "octagon": svg = svgOctagon; break; // 八边形
+            case "plus": svg = svgPlus; break;
+            case "checkmark": svg = svgCheckmark; break;
+            case "ring": svg = svgRing; break;
+            case "lightning": svg = svgLightning; break;
+            case "cloud": svg = svgCloud; break;
+            case "light": svg = svgLight; break;
+            case "pin": svg = svgPin; break;
+            case "zoom": svg = svgZoom; break;
+            case "share": svg = svgShare; break;
+            case "unicode": svg = svgUnicodeChar; break;
+            default:
+                svg = svgBookmark;
+                shape = "bookmark";
+        }
+
+        if(shape=="unicode") {
             let codePoints: number[] = getUnicodeCodePoints(iconText);
             // 将所有代码点转化为 HTML 实体格式（例如 &#127473;）
             let codePointStr: string = codePoints.map(cp => `&#${cp};`).join("");

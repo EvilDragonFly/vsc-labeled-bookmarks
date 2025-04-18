@@ -1,10 +1,10 @@
 {
 	"dataFormatVersion": 1,
-	"timestamp": 1744187526664,
+	"timestamp": 1744940231854,
 	"groups": [
 		{
 			"name": "debug",
-			"color": "rgba(221, 221, 0, 1.00)",
+			"color": "rgba(136, 136, 136, 1.00)",
 			"shape": "unicode",
 			"iconText": "🐞"
 		},
@@ -12,25 +12,25 @@
 			"name": "decoration",
 			"color": "rgba(221, 221, 0, 1.00)",
 			"shape": "plus",
-			"iconText": "\\u0018\\u000F"
+			"iconText": ""
 		},
 		{
 			"name": "main",
-			"color": "rgba(0, 221, 221, 1.00)",
+			"color": "rgba(255, 127, 80, 1.00)",
 			"shape": "pin",
-			"iconText": ">�"
+			"iconText": "=6"
 		},
 		{
 			"name": "saving",
-			"color": "rgba(0, 221, 0, 1.00)",
+			"color": "rgba(255, 0, 0, 0.40)",
 			"shape": "unicode",
 			"iconText": "S"
 		},
 		{
 			"name": "setting",
-			"color": "rgba(0, 221, 221, 1.00)",
-			"shape": "ring",
-			"iconText": ">�"
+			"color": "rgba(255, 255, 255, 1.00)",
+			"shape": "cloud",
+			"iconText": ""
 		}
 	],
 	"bookmarks": [
@@ -81,7 +81,7 @@
 		},
 		{
 			"fsPath": "src/decoration_factory.ts",
-			"lineNumber": 441,
+			"lineNumber": 409,
 			"characterNumber": 128,
 			"label": "create svg decoration",
 			"lineText": "async create(shape: string, color: string, iconText: string, lineLabel?: string): Promise<[TextEditorDecorationType, Uri]> {",
@@ -90,7 +90,7 @@
 		},
 		{
 			"fsPath": "src/decoration_factory.ts",
-			"lineNumber": 441,
+			"lineNumber": 409,
 			"characterNumber": 128,
 			"label": "generate new decoration svg for group",
 			"lineText": "async create(shape: string, color: string, iconText: string, lineLabel?: string): Promise<[TextEditorDecorationType, Uri]> {",
@@ -99,7 +99,7 @@
 		},
 		{
 			"fsPath": "src/decoration_factory.ts",
-			"lineNumber": 461,
+			"lineNumber": 429,
 			"characterNumber": 35,
 			"label": "render icon in gutter",
 			"lineText": "gutterIconPath: svgUri,",
@@ -108,7 +108,7 @@
 		},
 		{
 			"fsPath": "src/decoration_factory.ts",
-			"lineNumber": 472,
+			"lineNumber": 440,
 			"characterNumber": 47,
 			"label": "line end label options for bookmark",
 			"lineText": "if (typeof lineLabel !== \"undefined\") {",
@@ -117,7 +117,7 @@
 		},
 		{
 			"fsPath": "src/decoration_factory.ts",
-			"lineNumber": 493,
+			"lineNumber": 461,
 			"characterNumber": 85,
 			"label": "render svg decoration in editor",
 			"lineText": "let result = vscode.window.createTextEditorDecorationType(decorationOptions);",
@@ -270,16 +270,16 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 1261,
+			"lineNumber": 1275,
 			"characterNumber": 38,
-			"label": "action to set group icon",
-			"lineText": "textEditor.selection = currentSelection;",
+			"label": "set group shape",
+			"lineText": "public actionSetGroupIconShape() {",
 			"isLineNumberChanged": false,
 			"groupName": "decoration"
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 1580,
+			"lineNumber": 1576,
 			"characterNumber": 38,
 			"label": "all bookmark store action",
 			"lineText": "if (typeof selected !== \"undefined\") {",
@@ -288,7 +288,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 1653,
+			"lineNumber": 1649,
 			"characterNumber": 25,
 			"label": "convert bookmark abs path to relative path",
 			"lineText": "//     };",
@@ -297,7 +297,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 1707,
+			"lineNumber": 1703,
 			"characterNumber": 52,
 			"label": "import only selected group bookmarks",
 			"lineText": "originalStorage.setWorkspaceFolders([]);",
@@ -306,7 +306,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 1749,
+			"lineNumber": 1745,
 			"characterNumber": 67,
 			"label": "merge new bookmarks from file",
 			"lineText": "let currentGroups = this.persistentStorage.getGroups();",
@@ -315,7 +315,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 1822,
+			"lineNumber": 1818,
 			"characterNumber": 13,
 			"label": "get all colors options from configuration",
 			"lineText": "}",
@@ -324,7 +324,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 1839,
+			"lineNumber": 1835,
 			"characterNumber": 53,
 			"label": "read default shape",
 			"lineText": "if (config.has(this.configKeyDefaultShape)) {",
@@ -333,7 +333,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 1999,
+			"lineNumber": 1995,
 			"characterNumber": 31,
 			"label": "update status bar below vscode",
 			"lineText": "private updateStatusBar() {",
@@ -342,7 +342,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 2029,
+			"lineNumber": 2025,
 			"characterNumber": 32,
 			"label": "load bookmarks in side bar",
 			"lineText": "private loadBookmarkData() {",
@@ -351,7 +351,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 2080,
+			"lineNumber": 2076,
 			"characterNumber": 57,
 			"label": "add new bookmarks function",
 			"lineText": "private addNewDecoratedBookmark(bookmark: Bookmark) {",
@@ -360,7 +360,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 2085,
+			"lineNumber": 2081,
 			"characterNumber": 68,
 			"label": "active group",
 			"lineText": "private activateGroup(name: string, saveState: boolean = true) {",
@@ -369,7 +369,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 2211,
+			"lineNumber": 2207,
 			"characterNumber": 73,
 			"label": "jumper to specific bookmark",
 			"lineText": "public jumpToBookmark(bookmark: Bookmark, preview: boolean = false) {",
@@ -378,7 +378,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 2313,
+			"lineNumber": 2309,
 			"characterNumber": 37,
 			"label": "set save bookmark interval",
 			"lineText": "private setStorageRateLimiter() {",
@@ -387,7 +387,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 2321,
+			"lineNumber": 2317,
 			"characterNumber": 37,
 			"label": "regularly saving",
 			"lineText": "private setStorageRateLimiter() {",
@@ -396,7 +396,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 2325,
+			"lineNumber": 2321,
 			"characterNumber": 47,
 			"label": "get file:// path scheme uri",
 			"lineText": "private getRealPath(path: string): string {",
@@ -405,7 +405,7 @@
 		},
 		{
 			"fsPath": "src/main.ts",
-			"lineNumber": 2330,
+			"lineNumber": 2326,
 			"characterNumber": 56,
 			"label": "rate function fire save bookmarks functions",
 			"lineText": "this.saveBookmarkDataImmediately.bind(this),",

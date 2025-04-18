@@ -1274,14 +1274,13 @@ export class Main implements BookmarkDataProvider, BookmarkManager, ActiveGroupP
     }
 
     public actionSetGroupIconShape() {
-        let iconText = this.activeGroup.iconText;
 
         let shapePickItems = new Array<ShapePickItem | QuickPickSeparator>();
 
         shapePickItems.push(new QuickPickSeparator("vector"));
         for (let [label, id] of this.shapes) {
             label = (this.activeGroup.shape === id ? "● " : "◌ ") + label;
-            shapePickItems.push(new ShapePickItem(id, iconText, label, "", ""));
+            shapePickItems.push(new ShapePickItem(id, "", label, "", ""));
         }
 
         shapePickItems.push(new QuickPickSeparator("unicode"));
@@ -1311,7 +1310,6 @@ export class Main implements BookmarkDataProvider, BookmarkManager, ActiveGroupP
 
     public actionSetCustomIconText() {
         let unicodeChar = this.activeGroup.iconText;
-        let shape = this.activeGroup.shape;
 
         vscode.window.showInputBox({
             placeHolder: "character for bookmark icon",
@@ -1323,7 +1321,7 @@ export class Main implements BookmarkDataProvider, BookmarkManager, ActiveGroupP
             }
 
             unicodeChar = input.trim();
-            this.activeGroup.setShapeAndIconText(shape, unicodeChar);
+            this.activeGroup.setShapeAndIconText("unicode", unicodeChar);
             this.updateBookmarkTimestamp();
             this.saveBookmarkData();
         });
